@@ -7,6 +7,8 @@ gem "rails",           "7.0.4"
 gem "bootstrap"
 gem "sassc-rails"
 gem "sprockets-rails", "3.4.2"
+
+gem 'bcrypt'
 gem "importmap-rails", "1.1.0"
 gem "turbo-rails",     "1.1.1"
 gem "stimulus-rails",  "1.0.4"
