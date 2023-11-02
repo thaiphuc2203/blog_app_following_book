@@ -10,6 +10,8 @@ class ActiveSupport::TestCase
 
   # Set up all fixtures in test/fixtures/*.yml.
   fixtures :all
+  include ApplicationHelper
+
 
   # Add more helper methods to be used by all tests here...
 end

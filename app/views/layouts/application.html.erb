@@ -10,9 +10,43 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag    'application', media: 'all',
                                               'data-turbolinks-track' => "reload" %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <div class="container-flouid">
+    
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container pt-5 pb-5">
+        <div class"small-font-size" width="20px">
+        <%= link_to "sample app", root_path, id: "logo" %>
+        </div>
+        <ul class="navbar-nav float-right">
+          <li class="nav-item <%= active_class(root_path) %>">
+            <%= link_to "Home", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= active_class(about_path) %>">
+            <%= link_to "About", about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= active_class(help_path) %>">
+            <%= link_to "Help", help_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item <%= active_class(contact_path) %>">
+            <%= link_to "Contact", contact_path, class: "nav-link" %>
+          </li>
+        </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container pt-2 pb-5">
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
